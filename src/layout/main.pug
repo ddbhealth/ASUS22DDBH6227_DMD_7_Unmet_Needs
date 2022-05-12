@@ -1,0 +1,26 @@
+include ../includes/general.pug
+block variables
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+html(xmlns="http://www.w3.org/1999/xhtml", xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office")
+  head
+    - var max_w = max_w || 600
+    - var title = title || "Amgen-ACR-O-Blasts"
+    - var fallback = fallback || "'Ubuntu', Arial, Helvetica, sans-serif";
+    - var externalFonts = externalFonts || ["https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300&display=swap"]
+    title #{title}
+    meta(http-equiv='Content-Type', content='text/html;', charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="format-detection", content="telephone=no")
+    include ../includes/conditionals/fonts.pug
+    include ../includes/conditionals/fonts_outlook_vml.pug
+    block conditionals
+    <link href="src/includes/css/reset.css" rel="stylesheet" data-embed >
+    //- style(type="text/css")
+    //-   include:scss(outputStyle="compressed") ../includes/scss/boiler.scss
+    //-   include:scss(outputStyle="compressed") ../includes/scss/utils.scss
+    block styles
+  body(style=`margin:0!important; padding:0!important; font-family: ${fallback};` topmargin="0" leftmargin="0" marginheight="0" marginwidth="0")
+    block content
+    if analytics
+      img(src=analytics style={ border: '0', margin: '0'})

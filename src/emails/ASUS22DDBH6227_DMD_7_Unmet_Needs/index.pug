@@ -1,0 +1,49 @@
+extends ../../layout/main.pug
+
+include global.pug
+
+block conditionals
+block styles
+  style(type="text/css")
+    include:scss(outputStyle="compressed") ./styles/inline.scss
+    include:clean-css ./styles/index.css
+  <!--[if mso]>
+    style(type="text/css")
+      include:clean-css ./styles/outlook.css
+  <![endif]-->
+  <!--[if gte mso 15]>
+    style(type="text/css").
+      .sup {
+        font-size: 100% !important;
+        line-height: 0 !important;
+        vertical-align: super !important;
+        mso-text-raise: 0 !important;
+      }
+  <![endif]-->
+block content
+  //- body(style="background-color: #eeeeee;" bgcolor="#eeeeee")
+  //- <IMG SRC="#" BORDER="0" HEIGHT="1" WIDTH="1" ALT="Advertisement">
+  //HIDDEN PREHEADER TEXT
+  div(style=`display: none!important;mso-hide:all; font-size: 1px; color: #fefefe; line-height: 1px; font-family: ${fallback}; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;`).
+
+
+  // CONTAINER TABLE
+  table(width="100%")&attributes(tableAtt)
+    tr
+      td(align="center" style=`background-color: ${bg_color};` bgcolor=bg_color)
+        //  WRAPPER TABLE
+        table(align="center" width=max_w class="mobile-table" bgcolor="#ffffff")&attributes(tableAtt)
+          tr
+            td
+              table(align="center" width="100%" class="mobile-table" bgcolor="#ffffff")&attributes(tableAtt)
+                tr
+                  td
+                    include components/header.pug
+                    include components/content1.pug
+                    include components/content2.pug
+                    include components/content3.pug
+                    include components/content4.pug
+                    include components/content5.pug
+                    //- include components/content.pug
+                    include components/footer.pug
+                  

@@ -1,0 +1,33 @@
+{
+  "header": {
+    "title": "Title",
+    "button":"contribute"
+  },
+  "content":{
+    "title": "Tell Us What You Think in 5 Minutes or Less"
+  },
+  "social_icons": [
+      {
+        "img": "icon-facebook.png",
+        "url": "#",
+        "width": "35",
+        "height": "29"
+      },
+      {
+        "img": "icon-twitter.png",
+        "url": "#",
+        "width": "35",
+        "height": "29"
+      },
+      {
+        "img": "icon-instagram.png",
+        "url": "#",
+        "width": "35",
+        "height": "29"
+      }
+    ],
+    "comments": [
+      "We created this template based on what emails developers needs, it is not an easy task but we bring you help",
+      "It is a long trip that never ends if you have any suggestion let us know"
+    ]
+}

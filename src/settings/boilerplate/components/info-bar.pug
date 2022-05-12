@@ -1,0 +1,17 @@
+table(width=max_w align="center" class="deviceWidth")&attributes(tableAtt)
+  tr
+    td(align="center" style="background-color: #ffffff;" bgcolor=white)
+      img(src=img_path+"arrow-up.png" width="46" height="22" style="display: block; border: 0px;")
+  tr
+    td(align="center" style=" padding: 35px; background-color: #1b9ba3; border-bottom: 20px solid #48afb5;" bgcolor="#1b9ba3")
+      table(align="center" width="100%")&attributes(tableAtt)
+        tr
+          td(align="center")
+            table
+              tr
+                each icon in social_icons
+                  td(style="padding: 0 10px;")
+                    a(href=icon.url target="_blank")
+                    img(src=img_path+icon.img width=icon.width height=icon.height style="display: block; border: 0px;")
+                td(class="f_normal" style=`font-family: ${fallback}; font-size: 20px; line-height: 24px; padding: 0 10px;`)
+                  a(href="#" target="_blank" class="white" style="text-decoration: none;") BLOG

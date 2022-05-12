@@ -1,0 +1,44 @@
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  .mobile-show {
+    display: table !important;
+  }
+
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .mobile-center {
+    text-align: center !important;
+  }
+
+  .mobile-table {
+    width: 100% !important;
+  }
+
+  .mobile-table-90 {
+    width: 90% !important;
+  }
+
+  .m-td-w {
+    width: 28px !important;
+  }
+
+  .bullet {
+    line-height: 1.2 !important;
+    font-size: 14px !important;
+  }
+
+  .mobile-show-td {
+    display: table-cell !important;
+  }
+
+  .mobile-show-span {
+    display: inline-block !important;
+  }
+
+  .br-mobile-show {
+    display: block !important;
+  }
+
+}

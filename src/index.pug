@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title Automate emails
+        style
+          :clean-css
+            body{
+                font-family: arial;
+                text-align:center;
+            }
+            section{
+                min-width: 600px;
+                width: 960px;
+                margin: 0 auto;
+            }
+            ul{
+                display: inline-block;
+                text-align: left;
+            }
+    body
+        h1 List of emails
+        //- p  To create new project enter in CLI : gulp boilerplate --name "Projectname"
+        section(class="hide")
+            ul
+                each val in links
+                    li
+                        a(href=val)=val

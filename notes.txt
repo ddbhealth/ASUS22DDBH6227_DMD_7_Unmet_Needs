@@ -1,0 +1,26 @@
+NEXT STEPS
+
+https://github.com/pugjs/pug/issues/2146
+https://www.npmjs.com/package/juice
+
+plugins vscode
+
+https://marketplace.visualstudio.com/items?itemName=spywhere.guides
+
+useful transforms for pug
+https://www.npmjs.com/package/jstransformer-clean-css
+https://www.npmjs.com/package/jstransformer-uglify-js
+https://www.npmjs.com/package/jstransformer-postcss
+https://www.npmjs.com/package/jstransformer-json
+
+pug data from json
+
+https://tusharghate.com/rendering-pug-templates-with-multiple-data-files
+
+fileExistence node
+
+http://stackoverflow.com/questions/4482686/check-synchronously-if-file-directory-exists-in-node-js
+
+Markdown editor
+
+https://stackedit.io/editor
