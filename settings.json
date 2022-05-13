@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "puglint.enable": true,
+    "guides.active.enabled.json": false,
+    "guides.active.enabled.javascript": false,
+    "guides.normal.width": 1,
+    "guides.active.width": 2,
+    "guides.active.color.dark": "rgba(120, 60, 60, 0.75)"
+    // "guides.stack.color.dark": "rgba(255, 255, 255, 1)"
+}

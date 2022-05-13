@@ -1,0 +1,31 @@
+extends ../../layout/main.pug
+
+include global.pug
+
+block conditionals
+block styles
+  style(type="text/css")
+    include:scss(outputStyle="compressed") ./styles/inline.scss
+    include:clean-css ./styles/index.css
+    <!--[if (gte mso 9)]>
+      include:clean-css ./styles/outlook.css
+    <![endif]-->
+block content
+  //- body(style="background-color: #eeeeee;" bgcolor="#eeeeee")
+
+  //HIDDEN PREHEADER TEXT
+  div(style=`display: none!important;mso-hide:all; font-size: 1px; color: #fefefe; line-height: 1px; font-family: ${fallback}; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;`).
+    &nbsp;
+
+  // CONTAINER TABLE
+  table(width="100%")&attributes(tableAtt)
+    tr
+      td(align="center" style=`background-color: ${bg_color};` bgcolor=bg_color)
+        //  WRAPPER TABLE
+        table(align="center" width=max_w class="mobile-table")&attributes(tableAtt)
+                tr
+                  td
+                    include fragments/header.pug
+                    include components/content.pug
+                    include components/info-bar.pug
+                    include components/footer.pug

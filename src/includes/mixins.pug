@@ -1,0 +1,255 @@
+//- Custom Mixins
+
+mixin addImg(src,alt)
+    //- Check if  src has http or https in the URL
+    - src = (src.toLowerCase().indexOf('http')+1) ? src : imagePath+src
+    -var imgStyle = {'display': 'block', 'padding': '0', color:'#ffffff', 'font-family':'Helvetica, arial, sans-serif', 'font-size': '16px'}
+    img(src=src alt=alt border="0" style=imgStyle)&attributes(attributes)
+
+mixin vSpacer(height, cls, colspan = "1", width_p = "100%")
+  tr&attributes(attributes)
+    td(width=width_p class=cls height=height style=`font-size:0px; line-height:${height}px;mso-line-height-rule:exactly;` colspan=colspan) &nbsp;
+
+mixin hSpacer(width, cls)
+  td(width=width class=cls height=1 style=`font-size:0px; line-height:1px;mso-line-height-rule:exactly;`) &nbsp;
+
+mixin spacer(size)
+    span(style=`font-size:0px; width=${size.width ? size.width : 1}px; height:${size.height ? size.height: 1}px; line-height:${size.height ? size.height: 1}px;mso-line-height-rule:exactly;display:block;`)&attributes(attributes) &nbsp;
+
+mixin line(height, color)
+  tr&attributes(attributes)
+    td(width="100%" height=height style=`font-size:0px; line-height:${height}px;mso-line-height-rule:exactly;background-color:${color}` bgcolor=color) &nbsp;
+mixin container(bgColor, topPadding, rightPadding, bottomPadding, leftPadding)
+  table(width="600" align="center" class="mobile-table container "+attributes.class bgcolor=bgColor style=attributes.style)&attributes(tableAtt)
+    +vSpacer(topPadding)
+    tr
+      td
+        table(align="center" width="100%")&attributes(tableAtt)
+          tr
+            +hSpacer(leftPadding)
+            td(align="center")
+              table(width="100%")&attributes(tableAtt)
+                tr
+                  td(width="100%" align="center")
+                    if block
+                      block
+            +hSpacer(rightPadding)
+    +vSpacer(bottomPadding)
+
+mixin containerFluid(bgColor, topPadding, rightPadding, bottomPadding, leftPadding)
+  table(width=attributes.width align="center" class="mobile-table container-fluid "+attributes.class bgcolor=bgColor style=attributes.style)&attributes(tableAtt)
+    +vSpacer(topPadding)
+    tr
+      td
+        table(width="100%")&attributes(tableAtt)
+          tr
+            +hSpacer(leftPadding)
+            td
+              table(width="100%")&attributes(tableAtt)
+                tr
+                  td(align="center")
+                    if block
+                      block
+            +hSpacer(rightPadding)
+    +vSpacer(bottomPadding)
+
+mixin tdbackground(params)
+  -var bgColor = params.bgColor
+  -var bgImage = params.bgImage
+  -var tdHeight = params.height ? params.height: "";
+  -var tdWidth = params.width ? params.width: "";
+  -var fullheight = params.height ? "" : "style='mso-fit-shape-to-text:true'"
+  -var height = tdHeight ? `height:${tdHeight}px;` : ""
+  -var width = tdWidth ? `width:${tdWidth}px;`: "";
+
+  if !width
+    table(cellpadding="0" cellspacing="0" border="0" width="100%")&attributes(tdHeight ? { 'height': tdHeight} : "")
+      tr
+        td(background=`${bgImage}` bgcolor=`${bgColor}` valign="top" style='background-size: cover;')
+          <!--[if gte mso 9]>
+          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;#{height}">
+            <v:fill type="tile" src="#{bgImage}" color="#{bgColor}" />
+            <v:textbox !{params.height ? "" : 'style="mso-fit-shape-to-text:true"'} inset="0,0,0,0">
+          <![endif]-->
+          div
+            if block
+              block
+          <!--[if gte mso 9]>
+            </v:textbox>
+          </v:rect>
+          <![endif]-->
+  else
+    td(style='background-size: cover;' background=`${bgImage}` bgcolor=`${bgColor}` valign="top")&attributes(tdHeight ? { 'height': tdHeight} : "",  tdWidth ? { 'width': tdWidth} : "")
+      <!--[if gte mso 9]>
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="#{height}#{width}">
+        <v:fill type="tile" src="#{bgImage}" color="#{bgColor}" />
+        <v:textbox !{params.height ? "" : 'style="mso-fit-shape-to-text:true"'} inset="0,0,0,0">
+      <![endif]-->
+      div
+        if block
+          block
+      <!--[if gte mso 9]>
+        </v:textbox>
+      </v:rect>
+      <![endif]-->
+
+
+
+
+//- ADD THIS MIXIN RIGHT AFTER BODY THE OPENING TAG
+//- params fallbackColor, bgImage
+//- +fullbgImage({})  or +fullbgImage({bgImage:"http://google.com", fallbackColor:"#dae7ec"})
+mixin fullbgImage(params)
+  -var bgColor = params.fallbackColor? params.fallbackColor:"gray";
+  -var bgImage = params.bgImage
+
+  div(style=`background-color:${bgColor};`)
+    <!--[if gte mso 9]>
+    <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+      <v:fill type="tile" src="#{bgImage}" color="#{bgColor}"/>
+    </v:background>
+    <![endif]-->
+    table(height="100%" width="100%" cellpadding="0" cellspacing="0" border="0")
+      tr
+        td(valign="top" align="left" background=`${bgImage}`)
+          if block
+            block
+
+
+//- params img, color,width,height, bgcolor, bordercolor, link, radius,font-family,font_size,font_weight, text, send by object literal
+//- +button({})  or +button({width:205, height:40, bgcolor:'green', radius:4})
+//- For two lines button, use two_lines: true
+mixin button(params)
+
+    -var bgColor = `background-color:${params.bgcolor? params.bgcolor:"gray"};`;
+    -var bg_img = `${ params.img? `background-image:url(${params.img});`:""}`;
+    -var border = params.bordercolor ? `border:1px solid ${params.bordercolor};`:"";
+    -var color = `color:${params.color? params.color:"white"};`;
+    -var fill = `${params.img ? "fill='t'":`fillcolor='${params.bgcolor}'`}`
+    -var font_family = `font-family:${params.font_family? params.font_family:"Arial, sans-serif"};`;
+    -var font_size = `font-size:${params.font_size? params.font_size:"13"}px;`;
+    -var font_weight = `font-weight:${params.font_weight?params.font_weight:"bold"};`;
+    -var text= params.text ? params.text:"Button";
+    -var text_hide = (params.img || params.bordercolor)?"mso-hide:all;":""
+    -var height= `${params.height ? params.height:"40"}px;`;
+    -var Outlookheight = height
+    -var link = params.link ? params.link:"#"
+    -var stroke = params.bordercolor ? `strokecolor='${params.bordercolor}'` : "stroke='f'"
+    -var width= `width:${params.width ? params.width :"100"}px;`
+    -var buttonPadding= params.two_lines ? `padding-top:10px; padding-bottom:10px` : " "
+
+
+
+    if (params.two_lines)
+      - Outlookheight = `${params.height*2}px;`
+
+    div
+        if params.radius
+          <!--[if mso]>
+          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#{link}" style='height:#{Outlookheight}v-text-anchor:middle;#{width}' arcsize='#{Math.ceil((params.radius/params.height)*100)}%' #{stroke} #{fill}>
+          if params.img
+            <v:fill type="tile" src="#{params.img}" color="#{params.bgcolor}" />
+          <w:anchorlock/>
+          if (params.bordercolor || params.img)
+            <center style='#{color} #{font_family} #{font_size} #{font_weight}'>!{text}</center>
+            </v:roundrect>
+            <![endif]-->
+            a(href=link target="_blank" style=`${bgColor}${bg_img}${color}display:inline-block;${font_family}${font_size}${font_weight}border-radius:${params.radius}px;${border}line-height:${height}text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}`) !{text}
+          else
+            <center>
+            <![endif]-->
+              a(href=link target="_blank" style=`${bgColor}${color}display:inline-block;${font_family}${font_size}${font_weight}border-radius:${params.radius}px;line-height:${height}text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}`) !{text}
+            <!--[if mso]>
+            </center>
+            </v:roundrect>
+            <![endif]-->
+        else
+          <!--[if mso]>
+          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#{link}" style='height:#{Outlookheight}v-text-anchor:middle;#{width}' #{stroke} #{fill}>
+          if params.img
+            <v:fill type="tile" src="#{params.img}" color="#{params.bgcolor}" />
+          <w:anchorlock/>
+          if (params.bordercolor || params.img)
+            <center style='#{color}#{font_family}#{font_size}#{font_weight}'>!{text}</center>
+            </v:rect>
+            <![endif]-->
+            a(href=link target="_blank" style=`${bgColor}${bg_img}${color}display:inline-block;${font_family}${font_size}${font_weight}${border}line-height:${height}text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}`) !{text}
+          else
+            <center>
+            <![endif]-->
+              a(href=link target="_blank" style=`${bgColor}${color}display:inline-block;${font_family}${font_size}${font_weight}line-height:${params.two_lines ? (params.height/2+8) : params.height}px;text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}${buttonPadding}`) !{text}
+            <!--[if mso]>
+            </center>
+            </v:rect>
+            <![endif]-->
+
+mixin buttonMob(params)
+
+    -var bgColor = `background-color:${params.bgcolor? params.bgcolor:"gray"};`;
+    -var bg_img = `${ params.img? `background-image:url(${params.img});`:""}`;
+    -var border = params.bordercolor ? `border:1px solid ${params.bordercolor};`:"";
+    -var color = `color:${params.color? params.color:"white"};`;
+    -var fill = `${params.img ? "fill='t'":`fillcolor='${params.bgcolor}'`}`
+    -var font_family = `font-family:${params.font_family? params.font_family:"Arial, sans-serif"};`;
+    -var font_size = `font-size:${params.font_size? params.font_size:"13"}px;`;
+    -var font_weight = `font-weight:${params.font_weight?params.font_weight:"bold"};`;
+    -var text= params.text ? params.text:"Button";
+    -var text_hide = (params.img || params.bordercolor)?"mso-hide:all;":""
+    -var height= `${params.height ? params.height:"40"}px;`;
+    -var Outlookheight = height
+    -var link = params.link ? params.link:"#"
+    -var stroke = params.bordercolor ? `strokecolor='${params.bordercolor}'` : "stroke='f'"
+    -var width= `width:${params.width ? params.width :"100"}px;`
+    -var buttonPadding= params.two_lines ? `padding-top:10px; padding-bottom:10px` : " "
+
+    if (params.two_lines)
+      - Outlookheight = `${params.height*2}px;`
+
+    div
+        if params.radius
+          if (params.bordercolor || params.img)
+            a(href=link target="_blank" style=`${bgColor}${bg_img}${color}display:inline-block;${font_family}${font_size}${font_weight}border-radius:${params.radius}px;${border}line-height:${height}text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}`) !{text}
+          else
+              a(href=link target="_blank" style=`${bgColor}${color}display:inline-block;${font_family}${font_size}${font_weight}border-radius:${params.radius}px;line-height:${height}text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}`) !{text}
+        else
+          if (params.bordercolor || params.img)
+            a(href=link target="_blank" style=`${bgColor}${bg_img}${color}display:inline-block;${font_family}${font_size}${font_weight}${border}line-height:${height}text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}`) !{text}
+          else
+              a(href=link target="_blank" style=`${bgColor}${color}display:inline-block;${font_family}${font_size}${font_weight}line-height:${params.two_lines ? (params.height/2+8) : params.height}px;text-align:center;text-decoration:none;${width}-webkit-text-size-adjust:none;${text_hide}${buttonPadding}`) !{text}
+
+//-Receives vertical alignment, symbol and attributes, classes
+mixin bullet(v_align="top", symbol="•")
+  td(valign=v_align)&attributes(attributes) #{symbol}
+
+//- Receives number of columns
+mixin columns(columns)
+    - var num_rows = new Array(columns)
+    - var col_att = new Array(columns)
+    //- - var num_rows = new Array(columns).fill({})
+
+    mixin col(index)
+        - col_att[index] = attributes
+        - num_rows[index] = block;
+        //- - num_rows[index].body = block;
+    block
+    table&attributes(attributes)
+      tr
+        each tab,index in num_rows
+          td&attributes(col_att[index])
+            - tab && tab()
+
+//- Receives classes or boolean for hide and show
+mixin mobile_h_s(show,hide)
+  if show
+    <!--[if !mso]><!-->
+    div(style={display:"none"} class="show")
+      block show
+  <!--<![endif]-->
+  if hide
+    table(width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;" class="hide")
+      block hide
+
+//- you must pass number with dashes
+mixin tel_link(number, number_link, link_class = 'tel_link')
+  -var link = (number_link? number_link : number)
+  a(class=link_class href=`tel://${number}` target="_blank" style='color:#000;text-decoration:none;') #{link}

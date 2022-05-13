@@ -1,0 +1,5 @@
+if externalFonts && externalFonts.length>0
+  <!--[if !mso]><!-->
+  each font in externalFonts
+    link(href=font, rel="stylesheet" data-inline-ignore)
+  <!--<![endif]-->

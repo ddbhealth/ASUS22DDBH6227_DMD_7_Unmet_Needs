@@ -1,0 +1,20 @@
+table(width=max_w align="center" class="deviceWidth")&attributes(tableAtt)
+  tr
+    td(align="center" valign="top" style="font-size:0; padding: 35px;" bgcolor="#044767")
+      table(align="left" width="250" class="mobile-table")&attributes(tableAtt)
+        tr
+          td(align="left" valign="top" style=`font-family: ${fallback}; font-size:30px; line-height: 48px;` class="mobile-center f_bold")
+            h1( class="white f_bold" style="font-size: 30px; margin: 0;").
+              !{header.title}
+      table(align="right" width="250" class="mobile-hide")&attributes(tableAtt)
+        tr
+          td(class="f_normal" align="right" valign="top" style=`font-family: ${fallback}; font-size: 48px; line-height: 48px;`)
+            table(align="right")&attributes(tableAtt)
+              tr
+                td(class="f_normal" style=`font-family: ${fallback}; font-size: 18px; `)
+                  p(class="white f_normal" style="font-size: 18px;  margin: 0;")
+                    a(href="#" target="_blank" class="white" style="text-decoration: none;").
+                      #{header.button} &nbsp;
+                td(class="f_normal" style=`font-family: ${fallback}; font-size: 18px; line-height: 24px;`)
+                  a(href="#" target="_blank" class="white" style="text-decoration: none;")
+                    img(src=img_path+"shop.png" width="27" height="23" style="display: block; border: 0px;")

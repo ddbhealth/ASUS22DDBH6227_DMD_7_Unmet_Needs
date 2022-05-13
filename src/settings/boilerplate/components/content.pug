@@ -1,0 +1,26 @@
+table(width=max_w align="center" class="deviceWidth")&attributes(tableAtt)
+  tr
+    td(align="center" style="padding: 35px; background-color: #ffffff;" bgcolor=white)
+      table(align="center" width="100%")&attributes(tableAtt)
+        tr
+          td(align="center")
+            img(src=img_path+"hero-image-feedback.png" width="120" height="96")
+        tr
+          td(align="center" class="f_normal" style=`font-family: ${fallback}; font-size: 16px; line-height: 24px; padding-top: 25px; padding-bottom: 15px; border-bottom: 3px solid #eeeeee;`)
+            h2(class="f_bold" style="font-size: 30px; line-height: 36px; color: #333333; margin: 0;").
+             #{content.title}
+            p(class="f_normal" style="font-size: 16px; line-height: 24px; color: #777777;").
+              #{comments[0]}
+        tr
+          td(align="center" style="padding: 35px 0 15px 0;")
+            table&attributes(tableAtt)
+              tr
+                //- +button({bgcolor:'#ed8e20', radius:5, link: "#", font_family: fallback, text: "Offer Feedback"})(style=`font-size: 18px; text-decoration: none;  background-color: #ed8e20; padding: 15px 30px; border: 1px solid #ed8e20; display: block;`)
+                td(align="center" style="border-radius: 5px;" bgcolor="#ed8e20")
+                  a(href="#" target="_blank" class="white" style=`font-size: 18px; font-family: ${fallback}; text-decoration: none; border-radius: 5px; background-color: #ed8e20; padding: 15px 30px; border: 1px solid #ed8e20; display: block;`).
+                    Offer Feedback
+        tr
+          td(align="center" class="f_normal" style=`font-family: ${fallback}; font-size: 18px; line-height: 24px;`)
+            p(class="f_bold" style="font-size: 18px; line-height: 24px; color: #333333;") Thank you, for trying it
+            p(class="f_normal" style="font-size: 16px; line-height: 24px; color: #777777;").
+              #{comments[1]}

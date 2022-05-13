@@ -1,0 +1,15 @@
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  .mobile-hide {
+    display: none !important;
+  }
+  .mobile-center {
+    text-align: center !important;
+  }
+  .mobile-table {
+    width: 100% !important;
+  }
+}
+
+/* ANDROID CENTER FIX */
+div[style*="margin: 16px 0;"] { margin: 0 !important; }
