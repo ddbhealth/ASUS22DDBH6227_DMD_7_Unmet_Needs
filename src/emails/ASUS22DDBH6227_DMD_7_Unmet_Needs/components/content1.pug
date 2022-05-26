@@ -1,46 +1,53 @@
 table(width="600" align="center" class="mobile-table" bgcolor="#ffffff")&attributes(tableAtt)
   tr 
-    +hSpacer(30)
     td 
-      table(width="100%" align="center" class="mobile-table" bgcolor="#EDEEEF")&attributes(tableAtt)
-        +vSpacer(10)
-        tr 
+      table(width="100%" align="center" class="mobile-table")&attributes(tableAtt)
+        tr
+          +hSpacer(30).mobile-hide
+          +hSpacer(10).mobile-show
           td 
-            table(width="100%" align="center" class="mobile-table")&attributes(tableAtt)
-                tr 
-                    +hSpacer(90)
-                    td(align="left" valign="top")
-                        table(width="100%" align="center" class="mobile-table")&attributes(tableAtt)
-                            tr 
-                                td(align="center" valign="top")
-                                    font(class="f12").
-                                        !{content1.text1} 
-                            +vSpacer(5)
-                            tr 
-                                td(align="center" valign="top").mobile-hide
-                                    img(src=img_path+"24.png" alt="24" width="154")
-                                td(align="center" valign="top").mobile-show
-                                    img(src=img_path+"24.png" alt="24" width="124")
-                            tr 
-                                td(align="center" valign="top")
-                                    font(class="f12").
-                                        !{content1.text2} 
-                    td(align="left" valign="top")
-                        table(width="100%" align="center" class="mobile-table")&attributes(tableAtt)
-                            tr 
-                                td(align="center" valign="top")
-                                    font(class="f12").
-                                        !{content1.text3} 
-                            +vSpacer(5)
-                            tr 
-                                td(align="center" valign="top").mobile-hide
-                                    img(src=img_path+"15.png" alt="15" width="154")
-                                td(align="center" valign="top").mobile-show
-                                    img(src=img_path+"15.png" alt="15" width="124")
-                            tr 
-                                td(align="center" valign="top")
-                                    font(class="f12").
-                                        !{content1.text4} 
-                    +hSpacer(100)
-        +vSpacer(10)
-    +hSpacer(30)
+            table(width="100%" align="center" class="mobile-table" bgcolor="#EDEEEF")&attributes(tableAtt)
+              +vSpacer(10)
+              tr
+                td 
+                  table(width="100%")&attributes(tableAtt)
+                    tr  
+                      +hSpacer(90).mobile-hide
+                      +hSpacer(10).mobile-show
+                      td(align="left" valign="top")
+                          table(width="100%" align="center" class="mobile-table")&attributes(tableAtt)
+                              tr 
+                                  td(align="center" valign="top")
+                                      font(class="f12").
+                                          !{content1.text1} 
+                              +vSpacer(5)
+                              tr 
+                                  td(align="center" valign="top").mobile-hide
+                                      img(src=img_path+"24.png" alt="24" width="154")
+                                  td(align="center" valign="top").mobile-show
+                                      img(src=img_path+"24.png" alt="24" width="124")
+                              tr 
+                                  td(align="center" valign="top")
+                                      font(class="f12").
+                                          !{content1.text2} 
+                      td(align="left" valign="top")
+                          table(width="100%" align="center" class="mobile-table")&attributes(tableAtt)
+                              tr 
+                                  td(align="center" valign="top")
+                                      font(class="f12").
+                                          !{content1.text3} 
+                              +vSpacer(5)
+                              tr 
+                                  td(align="center" valign="top").mobile-hide
+                                      img(src=img_path+"15.png" alt="15" width="154")
+                                  td(align="center" valign="top").mobile-show
+                                      img(src=img_path+"15.png" alt="15" width="124")
+                              tr 
+                                  td(align="center" valign="top")
+                                      font(class="f12").
+                                          !{content1.text4} 
+                      +hSpacer(90).mobile-hide
+                      +hSpacer(10).mobile-show
+              +vSpacer(10)
+          +hSpacer(30).mobile-hide
+          +hSpacer(10).mobile-show

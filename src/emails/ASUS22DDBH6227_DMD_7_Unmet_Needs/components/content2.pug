@@ -1,28 +1,33 @@
 table(width="600" align="center" class="mobile-table" bgcolor="#ffffff")&attributes(tableAtt)
   tr
-    +hSpacer(35)
     td 
       table(width="100%" align="center" class="mobile-table" )&attributes(tableAtt)
-        +vSpacer(20)
-        tr 
-            td(align="center" valign="top")
-                font(class="f14 color-red f_bold").
+        tr
+          +hSpacer(30).mobile-hide
+          +hSpacer(10).mobile-show
+          td 
+            table(width="100%")&attributes(tableAtt) 
+              +vSpacer(20)
+              tr
+                td(align="center" valign="top")
+                  font(class="f14 color-red f_bold").
                     !{content2.text1} 
-        +vSpacer(20)
-        tr 
-            td(align="center" valign="top")
-                a(href="https://www.hcp.novartis.com/products/scemblix/ph-cml/unmet-needs-in-cml/" target="_blank")
-                    img(src=img_path+"learn_more.png" alt="learnMore" width="170")
-        +vSpacer(20)
-        tr 
-            td(align="left" valign="top")
-                font(class="f18 color-grey-blue f_bold").
-                    !{content2.text2} 
-        +vSpacer(30)
-        tr 
-            td(align="left" valign="top")
-                font(class="f14").
-                    !{content2.text3} 
-        +vSpacer(20)
-    +hSpacer(30)
+              +vSpacer(20)
+              tr 
+                  td(align="center" valign="top")
+                      a(href="https://ad.doubleclick.net/ddm/trackclk/N7437.1785838DMDCONNECTS.COM/B26911126.336126772;dc_trk_aid=528531272;dc_trk_cid=172058925;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=?https://www.hcp.novartis.com/products/scemblix/ph-cml/unmet-needs-in-cml/?site=SCEMCML%3A%3Ae%3A%3A2022050910570&utm_source=dmd&utm_medium=email&utm_campaign=branded-scemblix-cml-2022&utm_content=scem_brd_learn-more_dmd_208067_cta_ddbh_cm_1x1&omap_code=208067&product=AIM%20XR%20Data%20%26%20Triggered%20Emails/" target="_blank")
+                          img(src=img_path+"learn_more.png" alt="learnMore" width="170")
+              +vSpacer(20)
+              tr 
+                  td(align="left" valign="top")
+                      font(class="f18 color-grey-blue f_bold").
+                          !{content2.text2} 
+              +vSpacer(30)
+              tr 
+                  td(align="left" valign="top")
+                      font(class="f14").
+                          !{content2.text3} 
+              +vSpacer(20)
+          +hSpacer(30).mobile-hide
+          +hSpacer(10).mobile-show
     

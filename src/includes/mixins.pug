@@ -10,8 +10,8 @@ mixin vSpacer(height, cls, colspan = "1", width_p = "100%")
   tr&attributes(attributes)
     td(width=width_p class=cls height=height style=`font-size:0px; line-height:${height}px;mso-line-height-rule:exactly;` colspan=colspan) &nbsp;
 
-mixin hSpacer(width, cls)
-  td(width=width class=cls height=1 style=`font-size:0px; line-height:1px;mso-line-height-rule:exactly;`) &nbsp;
+mixin hSpacer(width)
+  td(width=width height=1 style=`font-size:0px; line-height:1px;mso-line-height-rule:exactly;`)&attributes(attributes) &nbsp;
 
 mixin spacer(size)
     span(style=`font-size:0px; width=${size.width ? size.width : 1}px; height:${size.height ? size.height: 1}px; line-height:${size.height ? size.height: 1}px;mso-line-height-rule:exactly;display:block;`)&attributes(attributes) &nbsp;

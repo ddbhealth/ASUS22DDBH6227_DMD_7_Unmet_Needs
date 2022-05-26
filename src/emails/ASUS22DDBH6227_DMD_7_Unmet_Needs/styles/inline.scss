@@ -1,13 +1,5 @@
 @import "variables.scss";
 
-@media screen and (max-width: 600px) {
-  .mobile-hide {
-    display: none !important;
-  }
-  .mobile-show {
-    display: table !important;
-  }
-}
 .mobile-show {
   display: none !important;
 }
