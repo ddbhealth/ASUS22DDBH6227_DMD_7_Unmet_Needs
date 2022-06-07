@@ -3,6 +3,12 @@
 .mobile-show {
   display: none !important;
 }
+sup {
+  line-height: 0;
+  font-size: 60%;
+  vertical-align: super;
+  mso-text-raise: 60%;
+}
 .white {
   color: $white;
 }
@@ -17,6 +23,13 @@
 .color-grey-blue{
   color: #7A97AB;
 }
+.tuna{
+  color: $tuna;
+}
+
+.mine-shaft{
+  color: $mine-shaft;
+}
 
 .no_underline {
   text-decoration: none;
@@ -25,55 +38,67 @@
   font-family: Arial, sans-serif;
   font-size: 9px;
   line-height: 12px;
-  letter-spacing: 0.32px;
+  
 }
 .f11 {
   font-family: Arial, sans-serif;
   font-size: 11px;
   line-height: 17px;
-  letter-spacing: 0.32px;
+  
 }
 .f12 {
   font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
-  letter-spacing: 0.32px;
+  
+}
+.f13 {
+  font-family: Arial, sans-serif;
+  font-size: 13.8px;
+  line-height: 18px;
+  
 }
 .f14 {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.32px;
+  
+}
+.f15 {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+
 }
 .f18 {
   font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.32px;
+  
 }
 .f20 {
   font-family: Arial, sans-serif;
   font-size: 20px;
   line-height: 23px;
-  letter-spacing: 0.32px;
+  
 }
 .f22 {
   font-family: Arial, sans-serif;
-  font-size: 22px;
+  font-size: 22.5px;
   line-height: 28px;
-  letter-spacing: 0.32px;
+  
 }
 .f24 {
   font-family: Arial, sans-serif;
   font-size: 24px;
   line-height: 27px;
-  letter-spacing: 0.32px;
+  
 }
 .f42 {
   font-family: Arial, sans-serif;
   font-size: 42px;
   line-height: 45px;
-  letter-spacing: 0.32px;
+  
 }
 
 .f_normal {
