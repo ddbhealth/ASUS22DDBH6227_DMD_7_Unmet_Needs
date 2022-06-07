@@ -2,37 +2,37 @@
   "header": {
     "text1": "Developed under the direction and sponsorship of Novartis Pharmaceuticals Corporation.",
     "text2": "<a href='#' target='_blank' style='color:#C40D3C'><u>View this email in your browser</u></a>",
-    "text3": "Patients with CML who have resistance and/or intolerance to 2 or more TKIs may need a different approach<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>1-6</sup>",
-    "text4": "Data suggest that using line after line of ATP-competitive TKIs may lead to low response rates.<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>2,7,8</sup>",
-    "text5": "In a Phase 1/2 study of 118 patients receiving bosutinib who had been previously treated with ≥2 TKIs, 24% of patients achieved CCyR and 15% achieved MMR.<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>9*</sup> How do these results compare with what you typically expect from a 1st-line TKI in patients with Ph+ CML-CP?"
+    "text3": "Patients with CML who have resistance and/or intolerance to 2 or more TKIs may need a different approach<sup class='osup'>1-6</sup>",
+    "text4": "Data suggest that using line after line of ATP-competitive TKIs may lead to low response rates.<sup class='osup'>2,7,8</sup>",
+    "text5": "In a Phase 1/2 study of 118 patients receiving bosutinib who had been previously treated with ≥2 TKIs, 24% of patients achieved CCyR and 15% achieved MMR.<sup class='osup'>9</sup>* How do these results compare with what you typically expect from a 1st-line TKI in patients with Ph+ CML-CP?"
   },
   "content1": {
     "text1": "<b>CCyR</b>",
-    "text2": "of patients achieved CCyR<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>9*</sup>",
+    "text2": "of patients achieved CCyR<sup class='osup'>9</sup>*",
     "text3": "<b>MMR</b>",
-    "text4": "of patients achieved MMR<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>9*</sup>"
+    "text4": "of patients achieved MMR<sup class='osup'>9</sup>*"
   },
   "content2": {
     "text1": "Explore the data about CML in later lines",
-    "text2": "In later lines, patients with CML may also experience intolerance.<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>1-6</sup>",
-    "text3": "In a Phase 2 study of 60 patients with CML-CP or CML-AP who were treated with a 3rd-line TKI, <b>~55% experienced intolerance to a previous TKI</b>.<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>10</sup> Have you noticed intolerance in your patients who have been treated with 2 or more TKIs?"
+    "text2": "In later lines, patients with CML may also experience intolerance.<sup class='osup'>1-6</sup>",
+    "text3": "In a Phase 2 study of 60 patients with CML-CP or CML-AP who were treated with a 3rd-line TKI, <b>~55% experienced intolerance to a previous TKI</b>.<sup class='osup'>10</sup> Have you noticed intolerance in your patients who have been treated with 2 or more TKIs?"
   },
   "content3": {
-    "text1": "<b>~55% of patients with CML in 3rd line were intolerant to a previous TKI</b><sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>10</sup>",
-    "text2": "These data are specific to a Phase 2 study where <b>60 patients with CML-CP or CML-AP were treated with 2 prior TKIs</b>.<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>10</sup>"
+    "text1": "<b>~55% of patients with CML in 3rd line were intolerant to a previous TKI</b><sup class='osup'>10</sup>",
+    "text2": "These data are specific to a Phase 2 study where <b>60 patients with CML-CP or CML-AP were treated with 2 prior TKIs.</b><sup class='osup'>10</sup>"
   },
   "content4": {
     "text1": "Learn more about CML in later lines",
     "text2": "Is it time to consider a different approach for some of your patients?",
-    "text3": "Patients who are resistant to ATP-competitive TKI therapy in the ≥2nd-line setting<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>2,7,8</sup>",
-    "text4": "Patients who are intolerant to ATP-competitive therapy in the ≥2nd-line setting<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>9</sup>",
-    "text5": "Patients who have the T315I mutation<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>1</sup>",
+    "text3": "Patients who are resistant to ATP-competitive TKI<br class='mobile-hide'> therapy in the ≥2nd-line setting<sup class='osup'>2,7,8</sup>",
+    "text4": "Patients who are intolerant to ATP-competitive<br class='mobile-hide'> therapy in the ≥2nd-line setting<sup class='osup'>9</sup>",
+    "text5": "Patients who have the T315I mutation<sup class='osup'>1</sup>",
     "text6": "Not actual patients."
   },
   "content5": {
     "text1": "Read more about these types of patients",
     "text2": "AP, accelerated phase; ATP, adenosine 5′-triphosphate; CCyR, complete cytogenetic response; CML, chronic myeloid leukemia; CP, chronic phase; MMR, major molecular response; Ph+, Philadelphia chromosome-positive; TKI, tyrosine kinase inhibitor.",
-    "text3": "<sup style='font-size: 60%; mso-ansi-font-size: 95%;line-height:0px;vertical-align: super'>*</sup>Data based on a multicenter, open-label Phase 1/2 study of best cumulative response rates to bosutinib (starting dose: 500 mg/day) in patients previously treated with and who developed resistance to a 1st-line TKI. Additionally, these patients were resistant or intolerant to a ≥2nd-line TKI. One patient in the study had CML-AP. The median follow-up was 28.5 months. In this study, CCyR was defined as 0% Ph+ metaphases and MMR was defined as ≥3-log reduction from standardized baseline in ratio of BCR-ABL to ABL transcripts.",
+    "text3": "*Data based on a multicenter, open-label Phase 1/2 study of best cumulative response rates to bosutinib (starting dose: 500 mg/day) in patients previously treated with and who developed resistance to a 1st-line TKI. Additionally, these patients were resistant or intolerant to a ≥2nd-line TKI. One patient in the study had CML-AP. The median follow-up was 28.5 months. In this study, CCyR was defined as 0% Ph+ metaphases and MMR was defined as ≥3-log reduction from standardized baseline in ratio of BCR-ABL to ABL transcripts.",
     "text4": "<b style='color:#C40D3C'>References: 1.</b> Soverini S, Gnani A, Colarossi S, et al. <i>Blood</i>. 2009;114(10):2168-2171. <b style='color:#C40D3C'>2.</b> Garg RJ, Kantarjian H, O’Brien S, et al. <i>Blood</i>. 2009;114(20):4361-4368. <b style='color:#C40D3C'>3.</b> Ibrahim AR, Paliompeis C, Bua M, et al. <i>Blood</i>. 2010;116(25):5497-5500. <b style='color:#C40D3C'>4.</b>&nbsp;Gambacorti-Passerini C, Brümmendorf TH, Kim D-W, et al. <i>Am J Hematol</i>. 2014;89(7):732-742. <b style='color:#C40D3C'>5.</b> Shah NP, Kim D-W, Kantarjian H, et al. <i>Haematologica</i>. 2010;95(2):232-240. <b style='color:#C40D3C'>6.</b> Kantarjian HM, Giles FJ, Bhalla KN, et al. <i>Blood</i>. 2011;117(4):1141-1145. <b style='color:#C40D3C'>7.</b> Bosi GR, Fogliatto LM, Costa TEV, et al. <i>Hematol Transfus Cell Ther</i>. 2019;41(3):222-228. <b style='color:#C40D3C'>8.</b> Iacob RE, Zhang J, Gray NS, Engen JR. <i>PLoS One</i>. 2011;6(1):e15929. <b style='color:#C40D3C'>9.</b> Khoury HJ, Cortes JE, Kantarjian HM, et al. <i>Blood</i>. 2012;119(15):3403-3412. <b style='color:#C40D3C'>10.</b> Giles FJ, Abruzzese E, Rosti G, et al. <i>Leukemia</i>. 2010;24(7):1299-1301.",
     "text5": "This is a sponsored message from DMD on behalf of Novartis Pharmaceuticals Corporation. DMD provides sponsored health care–related messages from trusted third parties. This material is intended specifically and exclusively for US health care professionals. You are receiving this email because you have subscribed and agreed to receive information from a DMD email list.",
     "text6": "If you prefer not to receive these messages from this sender, please <a href='#' target='_blank' style='color: black'><u>click here</u></a> and confirm your request.",
